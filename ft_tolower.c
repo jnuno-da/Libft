@@ -6,13 +6,12 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 22:33:25 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/17 22:50:41 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/17 23:00:17 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		c = c + 32;
-	return (c);
+		return (c + 32);
 }
