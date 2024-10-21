@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:09:27 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/21 22:07:29 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/21 22:15:41 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			i++;
 			size --;
 		}
+		dst[i - 1] = '\0';
 	}
 	return (ft_strlen(src));
 }
