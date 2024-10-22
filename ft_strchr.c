@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 23:00:04 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/22 23:34:31 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/22 23:53:59 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /******************************************************************************/
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i++] != c)
 	{
 		if (s[i] == '\0')
-			return (0);sdasd
+			return (0);
 	}
 	return((char *)s);
 }
