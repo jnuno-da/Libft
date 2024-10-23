@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 14:08:27 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/21 16:08:54 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/10/23 20:34:19 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/10/23 20:49:28 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*d;
 	unsigned char	*s;
-	int	i;
+	int				i;
 
 	i = 0;
 	d = (unsigned char *)dst;
@@ -22,16 +22,20 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (src == NULL && dst == NULL)
 		return (NULL);
 	if (d > s)
+	{
 		while (len-- > 0)
 		{
 			d[len] = s[len];
 		}
+	}
 	else
+	{
 		while (i++ < len)
 		{
 			d[i] = s[i];
 		}
-	return (dst);		
+	}
+	return (dst);
 }
 /* #include <string.h>
 #include <stdio.h>

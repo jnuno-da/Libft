@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 13:02:41 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/23 20:49:27 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/10/23 20:00:13 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/10/23 21:38:14 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	int	i;
 
-	d = dst;
-	s = (unsigned char *)src;
-	if (src == NULL && dst == NULL)
-		return (dst);
-	while (n > 0)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		*d++ = *s++;
-		n--;
+		i++;
 	}
-	return (d);
+	while (s[i--] != c)
+	{
+		if (s[i] == c)
+			return ((char *)(&s[i]));
+	}
+	return (NULL);
 }
 /* #include <stdio.h>
 #include <string.h>
 
 int	main(void)
 {
-	char str1[]="456789";
-	char str2[]="2146";
-	char str3[]="456789";
-	char str4[]="2146";
+	const char *str = "A tua prima de 4";
+	int	c = 'a';
 
-	memcpy(str1, str2, 4);
-	printf("%s \n", str1);
-	ft_memcpy(str3, str4, 4);
-	printf("%s \n", str3);
-}*/
+	
+	const char *str1 = "A tua prima de 4";
+	int	c1 = 'a';
+
+	printf("Meu: %s\n", ft_strrchr(str, c));
+	printf("Original: %s", strrchr(str1, c1));
+}  */

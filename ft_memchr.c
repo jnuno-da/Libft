@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 09:53:03 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/23 20:49:30 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/10/23 22:18:42 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/10/24 00:09:45 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, size_t n)
-{
-	unsigned char	*p;
-
-	p = s;
-	while (n > 0)
-	{
-		*p = c;
-		p++;
-		n--;
-	}
-	return (s);
-}
-/*#include <stdio.h>
+#include <stdio.h>
 #include <string.h>
 
-int	main(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char str[50] = "Ai a minha vida";
-	char str2[50] = "Ai a minha vida";
+	size_t	i;
 
-	printf("Antes do memset: %s\n",str);
-	memset(str2, '$', 6);
-	printf("Memset original: %s\n",str2);	
-	ft_memset(str, '$', 6);
-	printf("Meu memset: %s\n",str);
-}*/
+	i = 0;
+	while (i < n)
+	{
+		if (((char *)s)[i] == c)
+			return ((void *)&s[i]);
+		i++;
+	}
+	return (NULL);
+}
+/* int	main(void)
+{
+	void *str = "A tua prima de 4";
+	int	c = 'm';
+
+	
+	void *str1 = "A tua prima de 4";
+	int	c1 = 'm';
+
+	printf("Meu: %s\n", ft_memchr(str, c, 17));
+	printf("Original: %s", memchr(str1, c1, 17));
+}  */

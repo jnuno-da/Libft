@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 13:02:41 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/23 20:49:27 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/10/23 21:01:26 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/10/23 21:55:16 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned int	i;
 
-	d = dst;
-	s = (unsigned char *)src;
-	if (src == NULL && dst == NULL)
-		return (dst);
-	while (n > 0)
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i] & s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
 	{
-		*d++ = *s++;
-		n--;
+		i++;
 	}
-	return (d);
+	return (s1[i] - s2[i]);
 }
 /* #include <stdio.h>
 #include <string.h>
 
 int	main(void)
 {
-	char str1[]="456789";
-	char str2[]="2146";
-	char str3[]="456789";
-	char str4[]="2146";
-
-	memcpy(str1, str2, 4);
-	printf("%s \n", str1);
-	ft_memcpy(str3, str4, 4);
-	printf("%s \n", str3);
-}*/
+	char a [] = {"a"};
+	char b [] = {"bb"};
+	
+	printf("%i \n",ft_strncmp(a,b,4));
+	printf("%i",strncmp(a,b,4));       
+ */

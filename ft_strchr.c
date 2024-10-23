@@ -1,14 +1,14 @@
-/******************************************************************************/
+/* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 23:00:04 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/22 23:53:59 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/10/23 20:58:59 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/10/24 00:09:48 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
-/******************************************************************************/
+/* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -18,23 +18,21 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i++] != c)
 	{
 		if (s[i] == '\0')
-			return (0);
+			return (NULL);
 	}
-	return((char *)s);
+	return ((char *)&s[i - 1]);
 }
-/*
-#include <stdio.h>
-#include <strings.h>
-
+/* #include <stdio.h>
+#include <string.h>
 int	main(void)
 {
 	const char *str = "A tua prima de 4";
-	int	c = 'N';
+	int	c = 'm';
 
 	
 	const char *str1 = "A tua prima de 4";
-	int	c1 = 'N';
+	int	c1 = 'm';
 
 	printf("Meu: %s\n", ft_strchr(str, c));
-	printf("Original: %s", ft_strchr(str1, c1));
-}*/
+	printf("Original: %s", strchr(str1, c1));
+} */
