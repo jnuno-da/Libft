@@ -6,12 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:18:42 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/24 00:09:45 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/25 23:35:05 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <libft.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -26,7 +25,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/* int	main(void)
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
 {
 	void *str = "A tua prima de 4";
 	int	c = 'm';

@@ -6,9 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:34:19 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/23 20:49:28 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/25 23:34:09 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -1,19 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 22:33:25 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/25 23:32:39 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/10/25 23:12:17 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/10/25 23:35:48 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-int	ft_tolower(int c)
+int	ft_atoi(const char *nptr)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+	int	i;
+	int	m;
+	int	res;
+
+	i = 0;
+	m = 1;
+	res = 0;
+	while ((nptr[i] >= '\b' && nptr[i] <= '\r') || (nptr[i] == ' '))
+	{
+		i++;
+	}
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			m = m * -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		res = res * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (res * m);
 }

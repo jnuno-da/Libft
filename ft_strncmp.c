@@ -6,9 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:01:26 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/23 21:55:16 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/25 23:33:06 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

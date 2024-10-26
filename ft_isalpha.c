@@ -6,9 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 20:43:37 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/23 20:49:24 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/25 23:35:36 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int	ft_isalpha(int c)
 {
