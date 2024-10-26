@@ -6,11 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 09:53:03 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/25 23:33:29 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/26 02:05:47 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

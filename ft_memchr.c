@@ -6,21 +6,23 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 22:18:42 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/25 23:35:05 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/26 02:38:20 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	unsigned char	*st;
+	size_t			i;
 
+	st = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		if (((char *)s)[i] == c)
-			return ((void *)&s[i]);
+		if (st[i] == c)
+			return ((void *)&st[i]);
 		i++;
 	}
 	return (NULL);
@@ -40,4 +42,4 @@ int	main(void)
 
 	printf("Meu: %s\n", ft_memchr(str, c, 17));
 	printf("Original: %s", memchr(str1, c1, 17));
-}  */
+}*/

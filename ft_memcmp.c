@@ -6,11 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 20:02:21 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/25 23:34:18 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/26 02:11:13 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while ((st1[i] == st2[i] && st1[i] != '\0' && i + 1 < n))
+	while ((st1[i] == st2[i] && st1[i] != '\0' && i + 1 < (int)n))
 	{
 		i++;
 	}

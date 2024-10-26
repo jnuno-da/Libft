@@ -6,11 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:02:41 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/25 23:34:14 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/26 02:05:49 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

@@ -6,11 +6,11 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:58:27 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/25 23:33:17 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/26 02:05:46 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

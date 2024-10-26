@@ -6,13 +6,13 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 22:03:35 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/25 23:35:18 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/26 02:43:15 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int	isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
 		return (1);
