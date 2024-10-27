@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 20:02:21 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/27 19:44:03 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/10/27 11:36:41 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/10/27 12:13:03 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	int		i;
-	char	*st1;
-	char	*st2;
+	char	*dup;
+	size_t	size;
 
-	st1 = (char *)s1;
-	st2 = (char *)s2;
-	i = 0;
-	if (n == 0)
-		return (0);
-	while ((st1[i] == st2[i] && i + 1 < (int)n))
-	{
-		i++;
-	}
-	return (((unsigned char *)st1)[i] - ((unsigned char *)st2)[i]);
+	size = ft_strlen(s) + 1;
+	dup = (char *)malloc(size);
+	if (!dup)
+		return (NULL);
+	else
+		ft_memcpy (dup, s, size);
+	return (dup);
 }
-/*#include <stdio.h>
+/* #include <stdio.h>
 #include <string.h>
+
 int	main(void)
 {
-	char *a = "ppp";
-	char *b = "ccc";
-	int n = 3;
-	printf("%i \n",ft_memcmp(a,b, n));
-	printf("%i",memcmp(a,b, n));	
-}*/
+	char str1[]="456789";
+	
+	char str3[]="456789";
+	
+
+	printf("%s \n",ft_strdup(str1));
+	
+	printf("%s \n", strdup(str3));
+} */

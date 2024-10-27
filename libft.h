@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 01:56:28 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/26 02:43:04 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/27 22:44:28 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdio.h>
+# include <stdlib.h>
 # include <string.h>
 
 int		ft_atoi(const char *nptr);
@@ -37,5 +38,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
+
 
 #endif

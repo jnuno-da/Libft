@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 21:01:26 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/26 02:39:23 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:28:12 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
 /* #include <stdio.h>
 #include <string.h>

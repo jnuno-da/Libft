@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 20:58:59 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/26 02:05:47 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:39:36 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i++] != c)
-	{
-		if (s[i] == '\0')
-			return (NULL);
-	}
-	return ((char *)&s[i - 1]);
+	return (ft_memchr(s, c, ft_strlen(s) + 1));
 }
 /* #include <stdio.h>
 #include <string.h>

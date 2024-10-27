@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 22:06:46 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/26 02:05:44 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:40:09 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	int	i;
 
 	i = 0;
-	if (str != 0)
+	if (str[i] != '\0')
 	{
 		while (str[i] != '\0')
 		{
