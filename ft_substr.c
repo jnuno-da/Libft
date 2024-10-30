@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 12:29:17 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/27 22:58:38 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/10/29 22:02:50 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,38 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	size_t	lengs;
+	size_t	slen;
 	size_t	i;
+	size_t	j;
 
-	i = 0;
-	lengs = ft_strlen(s);
+	i = start;
+	j = 0;
 	if (!s)
 		return (NULL);
-	if(start > lengs)
-		return(0);
-	sub = (char *)malloc(len + 1);
+	slen = ft_strlen(s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	sub = malloc(len + 1);
 	if (!sub)
 		return (NULL);
-	ft_strlcpy(sub, &s[start], lengs + 1);
+	while (j < len)
+	{
+		sub[j] = s[i];
+		j++;
+		i++;
+	}
+	sub[j] = '\0';
 	return (sub);
 }
-int main()
+/* int main()
 {
- const char* original = "Hello, World!";
-    int start = 10;
-    int length = 10;
+ const char* string = "Hola";
+    unsigned int start = 0;
+    size_t length = 18446744073709551615;
 
-    char* result = ft_substr(original, start, length);
+    char* result = ft_substr(string, start, length);
         printf("Substring: %s\n", result); 
         free(result);
- }
+} */
