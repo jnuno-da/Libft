@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 12:29:17 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/29 22:02:50 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/11/01 00:14:17 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
-	sub = malloc(len + 1);
+	sub = malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
-	while (j < len)
+	while (j < len && s[i])
 	{
 		sub[j] = s[i];
 		j++;
