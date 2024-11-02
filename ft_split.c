@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:21:13 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/11/01 01:08:33 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:32:55 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,9 +105,9 @@ void	*free_mem(char **str, int j)
 /* int	main()
 {
 	int	i = 0;
-	char *str = "ggggggggggg";
-	char **ss = ft_split(str, 'g');
-	printf("%d\n",cwords(str, 'g'));
+	char *str = "";
+	char **ss = ft_split(str, 'x');
+	printf("%d\n",cwords(str, 'x'));
 	while (ss[i])
 	{
 		printf("%s\n", ss[i]);

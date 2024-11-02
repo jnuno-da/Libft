@@ -6,7 +6,7 @@
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 23:12:17 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/10/27 20:36:18 by jnuno-da         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:06:13 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,11 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * m);
 }
-/* 
-#include <stdio.h>
+/* #include <stdio.h>
 #include <unistd.h>
 
-int	main(int argc, char **argv)
+int	main()
 {
-	if (argc != 2)
-		write(1, "\n",1);	
-	else
-		printf("%i",(ft_atoi("\010 9")));
+		printf("%i\n",(ft_atoi("214a7")));
+		printf("original: %i", atoi("214a7"));
 } */

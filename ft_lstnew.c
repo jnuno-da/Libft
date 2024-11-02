@@ -1,43 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jnuno-da <jnuno-da@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 21:47:35 by jnuno-da          #+#    #+#             */
-/*   Updated: 2024/11/01 12:09:32 by jnuno-da         ###   ########.fr       */
+/*   Created: 2024/11/01 12:31:52 by jnuno-da          #+#    #+#             */
+/*   Updated: 2024/11/01 14:35:57 by jnuno-da         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+t_list	*ft_lstnew(void *content)
 {
-	char				*str;
-	unsigned int		i;
-	unsigned int		size;
+	t_list	*newelem;
 
-	i = 0;
-	size = ft_strlen(s);
-	str = malloc(sizeof(char) * (size + 1));
-	if (!str)
+	newelem = malloc(sizeof(t_list));
+	if (!newelem)
 		return (NULL);
-	while (i < size)
-	{
-		str[i] = (*f)(i, s[i]);
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	newelem->content = content;
+	newelem->next = NULL;
+	return (newelem);
 }
-/* char	f_test(unsigned int i, char s)
+/* int	main()
 {
-	s += +32;
-	return (s);
-}
-int	main()
-{
-	char	str[] = "AAA";
-	ft_putendl_fd(ft_strmapi(str, f_test), 1);
+	t_list *test;
+	char *a = "cs";
+	
+	test = ft_lstnew((void *)a);
+	printf("%s", (char *)test->content);	
 } */
